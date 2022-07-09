@@ -80,3 +80,16 @@
     transform: translate(-50%, -50%);
 }
 
+.pfp
+{
+    height: 200px;
+}
+
+hr
+{
+    background-color: transparent;
+    border-style: none;
+    height: 2px;
+    width: 30%;
+}
+
