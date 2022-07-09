@@ -45,6 +45,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.center-small
+{
+    text-align: center;
+    font-size: small;
+}
+
 .large
 {
     font-size: large;
@@ -73,3 +79,4 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
