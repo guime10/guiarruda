@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>My name</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="favicon.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('submit', function(e) {
+                    let name = document.querySelector('#name').value;
+                    let utterance = new SpeechSynthesisUtterance(`hello, ${name}`);
+                    window.speechSynthesis.speak(utterance);
+                    e.preventDefault();
+                });
+            });
+
+        </script>
+
     </head>
-    <body class="index-background">
-        <div class="top-container">
-            <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
-            <h1>I'm Gui</h1>
-            <p>A Business/Finance Student (dual degree) and Developer on free time.</p>
-            <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-            <img src="images/mountain.png" alt="mountain-img">
-        </div>
-        <div class="middle-container">
-            <div class="profile">
-              <img class="pfp" src="images/gui.png" alt="profile-pic">
-              <h2>Hello.</h2>
-              <p>Lorem ipsum dolor sit amet, vitae volutpat, dui conubia, dolor urna. Non auctor, montes nulla distinctio.</p>
-            </div>
-            <hr>
-            <div class="skills">
-              <h2>My Skills.</h2>
-              <div class="skill-row">
-                <img class="ez" src="images/finance.gif" alt="">
-                <h3>Lorem & Ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna lectus, erat ligula. Hendrerit nam, lectus ante, ut lorem eros.</p>
-              </div>
-              <div class="skill-row">
-                <img class="ez" src="images/lol-league.gif" alt="">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis mauris. Curabitur wisi, quisque vel eu, rutrum nam.</p>
-              </div>
-            </div>
-            <hr>
-            <div class="contact-me">
-              <h2>Get In Touch</h2>
-              <h3>Lorem ipsum dolor sit amet, non elit.</h3>
-              <p>Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
-              <a class="btn" href="mailto:name@email.com">CONTACT ME</a>
-            </div>
-          </div>
-          
-          
-          <div class="bottom-container">
-            <a class="footer-link" href="https://www.linkedin.com/in/gui-arruda/">LinkedIn</a>
-            <a class="footer-link" href="https://www.instagram.com/gui_int/">Instagram</a>
-            <a class="footer-link" href="https://www.guiarruda.com/">Website</a>
-            <p>©Gui.</p>
-          </div>
+    <body class="center-index">
+
+        <header class="large">
+            <ul class="m-3 nav">
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="travel.html">Travel</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="Music.html">Music</a>
+                    </li>
+            </ul>
+            <form>
+                <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+                <input type="submit">
+            </form>
+            <p></p>
+            Welcome to my home page!
+            <p></p>
+        </header>
+            <main class="medium">
+
+                <p>
+                    My name is Gui and I'm 21 years old, I'm from Brazil and currently living in US. 
+                </p>
+                Im currently working on this Personal Website as my personal project, feel free to check it out as it will be updated constantly.
+                <p>
+
+                </p>
+
+                <iframe width="1080" height="720"
+                src="https://www.youtube.com/embed/_ITiwPMUzho?autoplay=1&mute=1">
+                </iframe>
+
+            </main>
+        <footer class="small">
+            Copyright &#169; Gui
+        </footer>
     </body>
 </html>
