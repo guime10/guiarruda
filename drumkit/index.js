@@ -1,9 +1,30 @@
+//detect button press
+
+var lenght = document.querySelectorAll(".drum").length;
+
+for (let i = 0; i < lenght; i++){
+    document.querySelectorAll(".drum")[i].addEventListener("click", handleclick);
+
+    var buttonInnerHTML = this.innerHTML;
+
+    makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
+}
+
+//Detect keyboard press
+
+document.addEventListener("keydown", function(event) {
+    makeSound(event.key);
+
+    buttonAnimation(event.key);
+})
+
 function handleclick() {
     var buttonInnerHTML = this.innerHTML;
 
     makeSound(buttonInnerHTML)
-        
-    }
+}
 
 function makeSound(key) {
     switch (key){
@@ -46,21 +67,17 @@ function makeSound(key) {
     }
 }
 
+function buttonAnimation(currentKey) {
 
-//detect button press
+   var activeButton = document.querySelector("." + currentKey);
 
-var lenght = document.querySelectorAll(".drum").length;
+   activeButton.classList.add("pressed")
 
-for (let i = 0; i < lenght; i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click", handleclick);
-
-    var buttonInnerHTML = this.innerHTML;
-
-    makeSound(buttonInnerHTML);
+    setTimeout(function() {
+        activeButton.classList.remove("pressed");
+    }, 100);
 }
 
-//Detect keyboard press
 
-document.addEventListener("keydown", function(event) {
-    makeSound(event.key);
-})
+
+
