@@ -4,12 +4,6 @@ var lenght = document.querySelectorAll(".drum").length;
 
 for (let i = 0; i < lenght; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", handleclick);
-
-    var buttonInnerHTML = this.innerHTML;
-
-    makeSound(buttonInnerHTML);
-
-    buttonAnimation(buttonInnerHTML);
 }
 
 //Detect keyboard press
@@ -23,7 +17,9 @@ document.addEventListener("keydown", function(event) {
 function handleclick() {
     var buttonInnerHTML = this.innerHTML;
 
-    makeSound(buttonInnerHTML)
+    makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
 }
 
 function makeSound(key) {
