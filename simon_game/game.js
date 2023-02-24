@@ -44,9 +44,8 @@ function checkAnswer(currentLevel) {
 }
 
 function nextSequence() {
-
-    userClickedPattern = [];
     level++;
+    userClickedPattern = [];
     $("#level-title").text("Level " + level);
 
     var randomNumber = Math.floor(Math.random() * 4);
@@ -74,5 +73,5 @@ function animatePress(currentColor) {
 function startOver() {
     level = 0;
     gamePattern = [];
-    started = "false";
- }
+    started = false;
+  }
