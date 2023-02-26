@@ -59,6 +59,7 @@ function nextSequence() {
 
 function playSound(name){
     var audio = new Audio("sounds/" + name + ".mp3");
+    $(".audio").prop(volume, 0.1);
     audio.play();
 }
 
