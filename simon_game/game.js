@@ -44,8 +44,9 @@ function checkAnswer(currentLevel) {
 }
 
 function nextSequence() {
-    level++;
+
     userClickedPattern = [];
+    level++;
     $("#level-title").text("Level " + level);
 
     var randomNumber = Math.floor(Math.random() * 4);
@@ -59,7 +60,7 @@ function nextSequence() {
 
 function playSound(name){
     var audio = new Audio("sounds/" + name + ".mp3");
-    $(".audio").prop(volume, 0.1);
+    audio.volume = 0.03;
     audio.play();
 }
 
@@ -74,5 +75,5 @@ function animatePress(currentColor) {
 function startOver() {
     level = 0;
     gamePattern = [];
-    started = false;
-  }
+    started = "false";
+ }
