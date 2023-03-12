@@ -131,7 +131,9 @@ p
 
 .pfp
 {
-  max-height: 250px;
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
 }
 
 .education-gif
