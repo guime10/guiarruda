@@ -60,7 +60,7 @@ function nextSequence() {
 
 function playSound(name){
     var audio = new Audio("sounds/" + name + ".mp3");
-    audio.volume = 0.03;
+    audio.volume = 0.05;
     audio.play();
 }
 
